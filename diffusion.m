@@ -1,15 +1,16 @@
 %% Diffusion limited stochastic biosensor
 % Simulates the non-ideal target receptor binding 
 % Uniform molecule density assumed initially
+
 %% System specifications
 L = 1e-4;               % cm
 W = 1e-4;               % cm 
 H = 1e-4;
 Na = 6.022e23;
 A = L*W;                % cm^2  
-l = L/5;               % Length of smaller domain
-w = W/5;  
-h = H/5;               
+l = L/10;               % Length of smaller domain
+w = W/10;  
+h = H/10;               
 v = l*w*h;              % Volume of domain, for calculation of density
 a = l*w;                % Area of domain
 
@@ -28,11 +29,11 @@ ky = D/w^2;
 kz = D/h^2;
 
 %kfm = kf*(lsites*wsites);          % Stochastic Forward reaction rate s^-1 = kf_deterministic/(Na*V)
-                                   % Smaller the volume larger the stochastic rate                     
+                                    % Smaller the volume larger the stochastic rate                     
 %krm = kr;                          % Stochastic Reverse reaction rate s^-1 = kr_deterministic
 
-N0 = 200;                          % #Surface traps/receptors 
-Ps = 2000;                         % 
+N0 = 200;                           % #Surface traps/receptors 
+Ps = 2000;                          % 
 
 %% Simulation setup
 time = [1e-6];
